@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PO Tracker with Dropdown</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>PO TRACKER</h1>
+
+    <!-- File Upload -->
+    <input type="file" id="fileUpload" />
+    <br /><br />
+
+    <!-- Table to display PO Numbers -->
+    <table id="poTable">
+      <thead>
+        <tr>
+          <th>PO Number</th>
+          <th>Vendor</th>
+          <th>Status</th>
+          <!-- Status Column -->
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Table rows will be added dynamically by JavaScript -->
+      </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

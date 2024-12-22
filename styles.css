@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #fafafa;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* File upload styling */
+input[type="file"] {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  background-color: #565239;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="file"]:hover {
+  background-color: #e1d76b;
+}
+
+/* Main Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #333; /* Thicker, darker border around the table */
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 2px solid #333; /* Darker, thicker borders for cells */
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase; /* Optional: Make headers uppercase */
+}
+
+td {
+  background-color: #f9f9f9;
+  font-size: 14px;
+}
+
+td:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td:hover {
+  background-color: #e1e1e1; /* Slight hover effect for better visibility */
+}
+
+/* Highlighted Cells for Mismatch */
+td.highlight {
+  background-color: yellow;
+  color: #ff0088;
+  font-weight: bold;
+}
+
+/* Dropdown Arrow */
+.dropdown-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.dropdown-btn:hover {
+  color: #4caf50;
+}
+
+/* Hidden Details */
+.details-row {
+  display: none;
+  background-color: #f7f7f7;
+}
+
+.details-row td {
+  text-align: left;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+/* Excel-like Details Table */
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: 2px solid #333; /* Darker border for details table */
+}
+
+.details-table th,
+.details-table td {
+  padding: 8px;
+  text-align: center;
+  border: 2px solid #333; /* Darker borders around details table cells */
+}
+
+.details-table th {
+  background-color: #f2f2f2;
+}
+
+/* Set only the column headers "Product", "Quantity", "Received" to black and bold (MAKE IT APPEAR TO COLOR BLACK)*/
+.details-table th:nth-child(1),
+.details-table th:nth-child(2),
+.details-table th:nth-child(3),
+.details-table th:nth-child(4) {
+  color: black;
+  font-weight: bold;
+}
+
+.details-table td {
+  background-color: #fafafa;
+}
+
+.details-table tr:hover td {
+  background-color: #f1f1f1;
+}
+
+/* Highlight PO row for mismatch */
+.po-row.highlight-po {
+  background-color: #83076c; /* Yellow background for mismatched PO */
+  font-weight: bold;
+  color: #ff5733; /* Optional: Red text for visibility */
+}
