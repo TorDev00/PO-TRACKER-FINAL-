@@ -96,7 +96,7 @@ function displayPOTable(jsonData) {
       // Add row to the table
       poTableBody.appendChild(poRow);
 
-      // Add hidden details row with Product, Quantity, Received, and Left
+      // Add hidden details row with Product, Quantity, Received, and remaining
       const detailsRow = document.createElement("tr");
       detailsRow.classList.add("details-row");
       const detailsCell = document.createElement("td");
@@ -133,9 +133,9 @@ function createDetailsTable(items) {
   receivedHeader.textContent = "Received";
   headerRow.appendChild(receivedHeader);
 
-  const leftHeader = document.createElement("th");
-  leftHeader.textContent = "Left"; // Header for "Left" column
-  headerRow.appendChild(leftHeader);
+  const remainingHeader = document.createElement("th");
+  remainingHeader.textContent = "REMAINING"; // Header for "remaining" column
+  headerRow.appendChild(remainingHeader);
 
   thead.appendChild(headerRow);
   detailsTable.appendChild(thead);
@@ -155,15 +155,15 @@ function createDetailsTable(items) {
     receivedCell.textContent = item["RECEIVED"] || "0"; // Show '0' if received is missing
     row.appendChild(receivedCell);
 
-    // Calculate the remaining (LEFT) pieces
+    // Calculate the remaining (remaining) pieces
     const quantity = parseInt(item["QUANTITY"], 10) || 0;
     const received = parseInt(item["RECEIVED"], 10) || 0;
-    const left = quantity - received;
+    const remaining = quantity - received;
 
-    // LEFT cell
-    const leftCell = document.createElement("td");
-    leftCell.textContent = left >= 0 ? left : "0"; // Show remaining pieces
-    row.appendChild(leftCell);
+    // remaining cell
+    const remainingCell = document.createElement("td");
+    remainingCell.textContent = remaining >= 0 ? remaining : "0"; // Show remaining pieces
+    row.appendChild(remainingCell);
 
     // Highlight mismatched received quantities in details table
     if (quantity !== received) {
